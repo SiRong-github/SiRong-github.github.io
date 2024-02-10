@@ -1,1 +1,418 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* Body */
+    body {
+      background-color: #e6e6fa; /* Lavender Mist */
+      color: #2f4f4f; /* Dark Slate Gray */
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      width: 50%; /* Set the width of the body to 80% of the viewport width */
+      margin: 0 auto; /* Centre the body horizontally */
+    }
+
+    .intro {
+      color: #8e4585; /* Plum */
+      font-family: cursive;
+    }
+
+    /* Tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid;
+      background-color: #778899; /* Light Slate Grey */
+      padding: 10px;
+    }
+
+    /* Buttons for tab content */
+    .tab button {
+      background-color: #778899; /* Light Slate Grey */
+      color: #4b0082; /* Indigo */
+      font-family: Copperplate;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 30px;
+    }
+
+    /* Background colour of buttons when hovering */
+    .tab button:hover {
+      background-color: #b0c4de; /* Light Steel Blue */
+    }
+
+    /* Active tablink */
+    .tab button.active {
+      background-color: #b0c4de; /* Light Steel Blue */
+      color: #2f4f4f; /* Dark Slate Grey */
+    }
+
+    /* Tab content */
+    .tabcontent {
+      display: none;
+      padding: 20px 20px 20px;
+      background-color: #b0c4de; /* Light Steel Blue */
+      border: 1px solid;
+    }
+  </style>
+
+  <body>
+    <!-- Java -->
+    <script>
+      const ShadowFlap = {
+        name: "ShadowFlap",
+        description:
+          "The program implements the Flappy Bird game using the Bagel package: \
+        https://people.eng.unimelb.edu.au/mcmurtrye/bagel-doc/bagel/package-frame.html",
+        link: "https://github.com/SiRong-github/ShadowFlap",
+      };
+
+      const Tetris = {
+        name: "Tetris",
+        description:
+          "The program refactors a provided replica of the simple Tetris game \
+        to better adhere to the GRASP principles and patterns.",
+        link: "https://github.com/SiRong-github/Tetris",
+      };
+
+      const GameOfThrones = {
+        name: "Game of Thrones",
+        description: "",
+        link: "",
+      };
+
+      const PacmanInTorusverse = {
+        name: "Pacman in Torusverse",
+        description: "",
+        link: "",
+      };
+
+      const PacmanInMultiverse = {
+        name: "Pacman in Multiverse",
+        description:
+          "The program refactors a provided imitation of the\
+        Pacman game called Pacman in the Multiverse to better adhere to \
+        the GRASP principles and patterns.",
+        link: "https://github.com/SiRong-github/Pacman-In-The-Multiverse",
+      };
+    </script>
+    <!-- C -->
+
+    <script>
+      const DUKH = {
+        name: "DUKH Attack",
+        description:
+          "The program decrypts an encrypted message whilst knowing some \
+        details on its generation.",
+        link: "https://github.com/SiRong-github/DUKH-Attack",
+      };
+    </script>
+
+    <!-- Python -->
+    <script>
+      const shatoria2 = {
+        name: "shatoria2",
+        description:
+          "The program implements one of the players in a strategic, \
+        perfect-information two-player game of contagion and domination called Infexion.",
+        link: "https://github.com/SiRong-github/shatoriaP2",
+      };
+
+      const shatoria = {
+        name: "shatoria",
+        description:
+          "The program implements a list of SPREAD actions with the lowest \
+        cost win sequence for one of the players in a strategic, perfect-information \
+        single-player version of the two-player game of contagion and domination called \
+        Infexion.",
+        link: "https://github.com/SiRong-github/shatoria",
+      };
+
+      const COMP20008 = {
+        name: "COMP20008-Data-Science-Project",
+        description:
+          "This is a research project on the topic of whether there exists a \
+        relation between income and COVID-1 case numbers of each postcode area in \
+        Victoria, Australia.",
+        link: "https://github.com/SiRong-github/COMP20008-Data-Science-Project",
+      };
+    </script>
+
+    <!-- Unity & C++ -->
+    <script>
+      const EmotionalPizzeria = {
+        name: "Emotional Pizzeria",
+        description:
+          "A papa's pizzeria style game which involves the player having \
+        to serve customers the right order within a specific time limit. \
+        Instead of the traditional game where customers order food, \
+        the customers will tell the player about a situation they experienced, \
+        and the player will have to decide which emotion is closest to what \
+        they must be feeling. If they get it correct, they receive a certain number \
+        of hearts.",
+        link: "https://github.com/SiRong-github/Emotional-Pizzeria",
+      };
+
+      const TeamOrange = {
+        name: "Team-Orange",
+        description:
+          "Fly-by is an endless runner in which you travel through the sky as \
+        a plane or a hot air balloon. You will encounter different obstacles, power-ups \
+        and weather conditions as you move forwards. The obstacles and weather conditions \
+        are designed to make your journey difficult. For example, the fog and night modes \
+        will make it difficult for you to see what is ahead of you. Conversely, the \
+        power-ups will help you along your journey. Depending on the power-up you obtain \
+        you may either be granted a period of invincibility or both invincibility and a \
+        massive speed boost! The aim of the game is to fly as far as possible without \
+        crashing into an obstacle. If you crash into an obstacle, your jouney will come \
+        to an end!",
+        link: "https://github.com/SiRong-github/Team-Orange",
+      };
+    </script>
+
+    <script>
+      const Java = {
+        id: "Java",
+        name: "Java",
+        projects: [PacmanInMultiverse, Tetris, ShadowFlap],
+        // projects: [
+        //   PacmanInMultiverse,
+        //   PacmanInTorusverse,
+        //   GameOfThrones,
+        //   Tetris,
+        //   ShadowFlap
+        // ]
+      };
+
+      const C = {
+        id: "C",
+        name: "C",
+        projects: [DUKH],
+      };
+
+      const Python = {
+        id: "Python",
+        name: "Python",
+        projects: [shatoria2, shatoria, COMP20008],
+      };
+
+      const Unity = {
+        id: "Unity",
+        name: "Unity & C#",
+        projects: [EmotionalPizzeria, TeamOrange],
+      };
+
+      const TABS = [Java, C, Python, Unity];
+    </script>
+
+    <!-- HTML Functions -->
+    <script>
+      /**
+       * Appends the content of a heading n to div
+       */
+      function appendHeading(content, n, div) {
+        const heading = document.createElement("h".concat(n));
+        heading.textContent = content;
+        appendElementToDiv(heading, div);
+      }
+
+      /**
+       * Appends the content of a paragraph to div
+       */
+      function appendParagraph(content, div) {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = content;
+        appendElementToDiv(paragraph, div);
+      }
+
+      /**
+       * Appends the content of a link to div
+       */
+      function appendLink(content, div) {
+        const link = document.createElement("a");
+        link.href = content;
+        link.textContent = content;
+        appendElementToDiv(link, div);
+      }
+
+      /**
+       * Appends a new line to div
+       */
+      function appendNewLine(div) {
+        const newLine = document.createElement("br");
+        appendElementToDiv(newLine, div);
+      }
+
+      /**
+       * Appends element to div
+       */
+      function appendElementToDiv(element, div) {
+        div.appendChild(element);
+      }
+
+      /**
+       * Creates the tab class
+       */
+      function createTabClass() {
+        const tabClass = document.createElement("div");
+        tabClass.className = "tab";
+        document.body.appendChild(tabClass);
+      }
+
+      /**
+       * Creates and appends a tab containing divId and divName
+       * Checks if the tab is the default tab
+       */
+      function createTab(isDefault, id, name) {
+        const tab = document.createElement("button");
+
+        /* Sets tab attributes */
+        tab.className = "tablinks";
+        tab.textContent = name;
+
+        if (isDefault == 1) {
+          tab.id = "defaultTab";
+        }
+
+        /* Sets tab onclick attribute */
+        tab.onclick = function () {
+          openTab(id, this);
+        };
+
+        /* Appends tab to tab class */
+        document.getElementsByClassName("tab")[0].appendChild(tab);
+
+        /* Creates tab content */
+        appendTabContent(id);
+      }
+
+      /**
+       * Appends content to a tab
+       */
+      function appendTabContent(id) {
+        const tabContent = document.createElement("div");
+        tabContent.id = id;
+        tabContent.className = "tabcontent";
+        document.body.appendChild(tabContent);
+      }
+
+      /**
+       * Creates a list
+       */
+      function createList(divId, content) {
+        const unordered = document.createElement("ul");
+        for (let i = 0; i < content.length; i++) {
+          const list = document.createElement("li");
+          nestedList(list, content[i]);
+          unordered.appendChild(list);
+        }
+        appendElementToDiv(unordered, divId);
+      }
+
+      /**
+       * Creates a nested list
+       */
+      function createNestedList(outerList, subcontent) {
+        const unordered = document.createElement("ul");
+        for (i = 0; i < subcontent.length; i++) {
+          const list = document.createElement("li");
+          list.textContent = subcontent[i];
+          unordered.appendChild(list);
+        }
+        outerList.appendChild(unordered);
+      }
+
+      /**
+       * Makes the provided tab active
+       */
+      function openTab(tabName, event) {
+        /* Variables */
+        var i, tabcontent, tablinks;
+
+        /* Hide all tabcontents */
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (let i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        /* Make all tablinks inactive */
+        tablinks = document.getElementsByClassName("tablinks");
+        for (let i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        /* Show current tab and make it active */
+        document.getElementById(tabName).style.display = "block";
+      }
+    </script>
+
+    <!-- Content -->
+
+    <script>
+      /**
+       * Creates tabs from a given array
+       */
+      function createTabs(tabs) {
+        for (let i = 0; i < tabs.length; i++) {
+          /* Variables */
+          let tab = tabs[i];
+          var isDefault = 0;
+
+          /* Sets default tab */
+          if (i == 0) {
+            isDefault = 1;
+          }
+
+          /* Creates tab */
+          createTab(isDefault, tab.id, tab.name);
+
+          /* Append contents to div */
+          let tabContent = document.getElementById(tab.id);
+          appendContents(tabContent.id, tab.projects);
+        }
+      }
+
+      /**
+       * Appends the contents for each div
+       */
+      function appendContents(id, contents) {
+        for (let i = 0; i < contents.length; i++) {
+          /* Create container for each project */
+          const container = document.createElement("div");
+
+          /* Append project details to container */
+          let content = contents[i];
+          container.id = content.name;
+          appendHeading(content.name, 3, container);
+          appendParagraph(content.description, container);
+          appendLink(content.link, container);
+          appendNewLine(container);
+          appendNewLine(container);
+
+          /* Append container to tab */
+          document.getElementById(id).appendChild(container);
+        }
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      function openDefaultTab() {
+        document.getElementById("defaultTab").click();
+      }
+    </script>
+
+    <h1 class="intro">Hey, I'm Shanaia! Welcome to my website!</h1>
+    <h3>
+      Here are some of the coding projects I worked on as a student at the
+      University of Melbourne.
+    </h3>
+    <div class="tab"></div>
+
+    <script>
+      createTabs(TABS);
+      openDefaultTab();
+    </script>
+  </body>
+</html>
