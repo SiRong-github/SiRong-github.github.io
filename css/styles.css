@@ -1,0 +1,243 @@
+/* 
+Colour palette
+https://colorhunt.co/palette/eeedebe6b9a69391852f3645 
+*/
+
+:root {
+  --lightGrey: #eeedeb;
+  --pink: #e6b9a6;
+  --darkGrey: #939185;
+  --blue: #2f3645;
+  --header-height: 5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+  background-color: var(--lightGrey);
+  color: var(--blue);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  font-size: large;
+  text-align: left;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--darkGrey);
+  color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1000;
+  height: var(--header-height) + 3rem;
+  overflow: hidden;
+}
+
+header .intro {
+  font-family: cursive;
+  padding: 0 2rem;
+  color: var(--lightGrey);
+}
+
+.navbar {
+  display: flex;
+  padding: 0 2rem;
+  height: var(--navbar-height);
+}
+
+.tablink {
+  font-family: Copperplate;
+  margin: 0 1rem;
+  font-size: larger;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* Background colour of buttons when hovering */
+.tablink:hover {
+  color: var(--pink);
+}
+
+.github:hover,
+.unity:hover {
+  color: var(--lightGrey);
+}
+
+main {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  font-family: Copperplate;
+}
+
+h2 {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--blue);
+  color: white;
+  font-family: cursive;
+}
+
+h3:not(.intro) {
+  text-align: center;
+  background-color: var(--lightGrey);
+  color: var(--blue);
+  padding: 1rem;
+}
+
+/* Active tablink */
+.tablink.active {
+  font-size: x-large;
+  color: white;
+}
+
+span:hover {
+  color: white;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--pink);
+  width: 100%;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.tabcontent {
+  padding-top: calc(var(--header-height) + 3rem);
+}
+
+.row {
+  display: flex;
+}
+
+.column,
+.proj-column {
+  padding: 1rem;
+  flex: 50%;
+  margin: 1rem;
+}
+
+#about .column {
+  align-self: center;
+}
+
+.proj-column {
+  background-color: var(--pink);
+  color: var(--blue);
+}
+
+a {
+  color: inherit;
+}
+
+.myPic {
+  max-width: 100%;
+  width: 45rem;
+  height: auto;
+}
+
+video {
+  max-width: 100%;
+  width: 30rem;
+  height: 15rem;
+  display: block;
+  margin: 3rem auto;
+  background-color: var(--lightGrey);
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 100%;
+  width: 50rem;
+  height: 70rem;
+  border: none;
+  overflow: hidden;
+}
+
+.github,
+.unity {
+  background-color: var(--darkGrey);
+  color: var(--blue);
+  padding: 0.5rem;
+  margin: 5rem 0;
+  border-radius: 15%;
+  text-decoration: none;
+}
+
+.desc {
+  padding: 1rem;
+}
+
+.contact {
+  /* padding: 1.5rem; */
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  text-decoration: none;
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: var(--darkGrey);
+  width: 5rem;
+  height: 5rem;
+  display: inherit;
+}
+
+span {
+  line-height: inherit;
+  font-size: xx-large;
+  padding: 1.5rem;
+  color: var(--blue);
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+
+  .myPic {
+    top: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  body {
+    width: 30%;
+  }
+}
