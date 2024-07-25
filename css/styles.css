@@ -11,34 +11,34 @@ https://colorhunt.co/palette/eeedebe6b9a69391852f3645
   --header-height: 5rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Body */
 body {
   background-color: var(--lightGrey);
   color: var(--blue);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin: 0 auto;
   font-size: large;
-  text-align: left;
+  margin: 0 auto;
 }
 
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  background-color: var(--darkGrey);
-  color: var(--blue);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
   z-index: 1000;
   height: var(--header-height) + 3rem;
-  overflow: hidden;
+  background-color: var(--darkGrey);
+  color: var(--blue);
 }
 
 header .intro {
@@ -48,8 +48,10 @@ header .intro {
 }
 
 .navbar {
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
   padding: 0 2rem;
+  margin-left: auto;
   height: var(--navbar-height);
 }
 
@@ -61,22 +63,14 @@ header .intro {
   text-decoration: none;
 }
 
-/* Background colour of buttons when hovering */
-.tablink:hover {
+.tablink:hover,
+.button:hover {
   color: var(--pink);
 }
 
-.github:hover,
-.unity:hover {
-  color: var(--lightGrey);
-}
-
 main {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5rem;
-  padding: 1rem;
+  width: 100%;
+  padding: 10rem;
 }
 
 h1 {
@@ -94,12 +88,11 @@ h2 {
 
 h3:not(.intro) {
   text-align: center;
-  background-color: var(--lightGrey);
   color: var(--blue);
   padding: 1rem;
+  background-color: white;
 }
 
-/* Active tablink */
 .tablink.active {
   font-size: x-large;
   color: white;
@@ -109,43 +102,31 @@ span:hover {
   color: white;
 }
 
-.subnav-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--pink);
-  width: 100%;
-  z-index: 1;
-  padding: 0.5rem 1rem;
-}
-
-.subnav:hover .subnav-content {
-  display: block;
-}
-
 .tabcontent {
   padding-top: calc(var(--header-height) + 3rem);
 }
 
-.row {
-  display: flex;
-}
-
-.column,
-.proj-column {
+.skill-tabcontent {
+  background-color: var(--pink);
   padding: 1rem;
-  flex: 50%;
   margin: 1rem;
 }
 
-#about .column {
-  align-self: center;
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.proj-column {
-  background-color: var(--pink);
+.column {
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+#skill .column {
+  background-color: var(--lightGrey);
   color: var(--blue);
+  flex: 50%;
 }
 
 a {
@@ -154,8 +135,9 @@ a {
 
 .myPic {
   max-width: 100%;
-  width: 45rem;
+  width: 50rem;
   height: auto;
+  margin-top: 1.5rem;
 }
 
 video {
@@ -164,28 +146,27 @@ video {
   height: 15rem;
   display: block;
   margin: 3rem auto;
-  background-color: var(--lightGrey);
+  background-color: var(--blue);
+}
+
+.iframe-container {
+  display: flex;
+  justify-content: center;
 }
 
 iframe {
-  display: block;
-  margin: 0 auto;
-  padding: 0 1rem;
-  max-width: 100%;
-  width: 50rem;
-  height: 70rem;
   border: none;
-  overflow: hidden;
+  max-width: 100%;
+  width: 45rem;
+  height: 70rem;
 }
 
-.github,
-.unity {
-  background-color: var(--darkGrey);
+.button {
+  background-color: white;
   color: var(--blue);
-  padding: 0.5rem;
-  margin: 5rem 0;
   border-radius: 15%;
   text-decoration: none;
+  padding: 0.5rem;
 }
 
 .desc {
@@ -193,7 +174,6 @@ iframe {
 }
 
 .contact {
-  /* padding: 1.5rem; */
   margin: 0 auto;
   padding: 0;
 }
@@ -208,6 +188,7 @@ iframe {
 .circle {
   border-radius: 50%;
   background-color: var(--darkGrey);
+  max-width: 100%;
   width: 5rem;
   height: 5rem;
   display: inherit;
@@ -222,22 +203,87 @@ span {
 
 @media (max-width: 480px) {
   body {
-    width: 100%;
+    font-size: small;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  header,
+  .row {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  .navbar {
+    margin: auto;
+  }
+
+  .tablink {
+    font-size: medium;
+  }
+
+  .tablink.active {
+    font-size: large;
+  }
+
+  .circle {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  span {
+    font-size: medium;
+    padding: 0.5rem;
   }
 
   .myPic {
-    top: auto;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 1097px) {
   body {
-    width: 80%;
+    font-size: medium;
   }
-}
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-  body {
-    width: 30%;
+  main {
+    padding: 5rem;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  .navbar {
+    margin: auto;
+  }
+
+  .tablink {
+    font-size: large;
+  }
+
+  .tablink.active {
+    font-size: x-large;
+  }
+
+  .circle {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  span {
+    font-size: large;
+    padding: 1rem;
   }
 }
