@@ -1,18 +1,19 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-var path = require("path");
-var TerserPlugin = require("terser-webpack-plugin");
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
-  entry: ["./src/index.js"],
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/dist",
+    publicPath: "/",
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
@@ -21,10 +22,9 @@ module.exports = {
       filename: "index.html",
       template: "./index.html",
     }),
+    new MiniCssExtractPlugin({
+      filename: "css/styles.css",
+    }),
   ],
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
-  },
   mode: "production",
 };
