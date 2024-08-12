@@ -133,7 +133,7 @@ a {
   color: inherit;
 }
 
-.myPic {
+img#myPic {
   max-width: 100%;
   width: 50rem;
   height: auto;
