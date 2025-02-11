@@ -1,24 +1,21 @@
 {
   "name": "sirong-github.github.io",
   "version": "1.0.0",
-  "description": "Shanaia's website",
-  "main": "index.js",
+  "description": "Feel free to visit my site here: https://sirong-github.github.io/",
+  "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack-dev-server",
-    "build-prod": "webpack",
-    "clean": "rm -rf dist"
+    "build-prod": "webpack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.97.1"
+  },
+  "dependencies": {
     "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.6.0",
-    "http-server": "^14.1.1",
-    "mini-css-extract-plugin": "^2.9.0",
-    "style-loader": "^4.0.0",
-    "url-loader": "^4.1.1",
-    "webpack-dev-server": "^5.0.4"
+    "url-loader": "^4.1.1"
   }
 }
