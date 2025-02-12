@@ -1,7 +1,7 @@
 {
   "name": "sirong-github.github.io",
   "version": "1.0.0",
-  "description": "Feel free to visit my site here: https://sirong-github.github.io/",
+  "description": "Visit my site here: https://sirong-github.github.io/",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
