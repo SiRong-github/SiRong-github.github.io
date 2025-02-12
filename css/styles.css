@@ -96,12 +96,6 @@ span:hover {
   padding-top: calc(var(--header-height) + 3rem);
 }
 
-.skill-tabcontent {
-  /* background-color: var(--pink); */
-  padding: 1rem;
-  margin: 1rem;
-}
-
 .row {
   display: flex;
   flex-direction: row;
@@ -142,24 +136,13 @@ video {
 .iframe-container {
   display: flex;
   justify-content: center;
-  /* position: relative;
-  overflow: hidden; */
-  /* width: 100%; */
-  /* padding-top: 56.25%; 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
 iframe {
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%; */
   border: none;
-  max-width: 100%;
-  width: 45rem;
+  width: 100%;
   height: 80rem;
+  margin: 0 auto;
 }
 
 .button {
@@ -185,7 +168,6 @@ iframe {
 a {
   color: inherit;
   display: inline-table;
-  /* margin: 1rem; */
   text-align: center;
 }
 
@@ -207,13 +189,17 @@ span {
 
 @media (max-width: 480px) {
   body {
-    font-size: small;
+    font-size: medium;
     margin: 0;
   }
 
   main {
     padding: 0rem;
     margin: auto;
+  }
+
+  #myPic {
+    max-width: 15rem;
   }
 
   header,
@@ -249,11 +235,6 @@ span {
 
   .column {
     flex: 100%;
-  }
-
-  .iframe-container,
-  .iframe {
-    width: 480px;
   }
 }
 
