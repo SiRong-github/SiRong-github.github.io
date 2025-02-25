@@ -30,12 +30,7 @@ header {
   height: var(--header-height) + 3rem;
   background-color: var(--darkGrey);
   color: var(--blue);
-}
-
-header .intro {
-  font-family: cursive;
-  padding: 0 2rem;
-  color: var(--lightGrey);
+  padding: 1rem;
 }
 
 .navbar {
@@ -54,9 +49,12 @@ header .intro {
   text-decoration: none;
 }
 
-.tablink:hover,
+.tablink:hover {
+  color: var(--lightGrey);
+}
+
 .button:hover {
-  color: var(--pink);
+  color: var(--darkGrey);
 }
 
 main {
@@ -66,14 +64,13 @@ main {
 h1 {
   text-align: center;
   font-family: Copperplate;
+  text-align: center;
 }
 
 h2 {
-  padding: 1rem;
+  padding-top: 5rem;
   text-align: center;
-  background-color: var(--blue);
-  color: white;
-  font-family: cursive;
+  font-family: Copperplate;
 }
 
 h3:not(.intro) {
@@ -89,7 +86,7 @@ h3:not(.intro) {
 }
 
 span:hover {
-  color: white;
+  color: var(--darkGrey);
 }
 
 .tabcontent {
@@ -108,9 +105,12 @@ span:hover {
 }
 
 #skill .column {
-  background-color: var(--lightGrey);
-  color: var(--blue);
   flex: 50%;
+}
+
+.skill-tabcontent h1 {
+  margin: 0;
+  padding: 0;
 }
 
 #myPic {
@@ -140,44 +140,29 @@ video {
 
 iframe {
   border: none;
-  width: 100%;
+  width: 480px;
   height: 80rem;
-  margin: 0 auto;
+  margin: auto;
 }
 
-.button {
-  background-color: white;
-  color: var(--blue);
-  border-radius: 15%;
-  text-decoration: none;
-  padding: 0.5rem;
-}
-
-.social {
-  display: flex;
-  justify-content: center;
-  margin: 1rem;
-  text-decoration: none;
-}
-
-.contact {
-  margin: 0 auto;
+#contact {
+  margin: auto;
   padding: 0;
-}
-
-a {
-  color: inherit;
-  display: inline-table;
   text-align: center;
 }
 
-.circle {
-  border-radius: 50%;
-  background-color: var(--darkGrey);
-  max-width: 100%;
-  width: 5rem;
-  height: 5rem;
-  display: inherit;
+.social {
+  text-decoration: none;
+  padding-bottom: 3rem;
+}
+
+.button {
+  color: inherit;
+}
+
+.button:not(p .button) {
+  font-weight: bolder;
+  padding-right: 0.5rem;
 }
 
 span {
@@ -223,13 +208,7 @@ span {
     font-size: x-large;
   }
 
-  .circle {
-    width: 2rem;
-    height: 2rem;
-  }
-
   span {
-    font-size: large;
     padding: 0.5rem;
   }
 
@@ -262,11 +241,6 @@ span {
 
   .tablink.active {
     font-size: x-large;
-  }
-
-  .circle {
-    width: 3rem;
-    height: 3rem;
   }
 
   span {
