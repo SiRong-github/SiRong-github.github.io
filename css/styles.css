@@ -143,6 +143,7 @@ iframe {
   width: 480px;
   height: 80rem;
   margin: auto;
+  background-color: var(--blue);
 }
 
 #contact {
